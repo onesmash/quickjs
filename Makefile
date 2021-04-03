@@ -86,7 +86,7 @@ ifdef CONFIG_CLANG
   endif
 else
   HOST_CC=gcc
-  CC=$(CROSS_PREFIX)gcc
+  CC=$(CROSS_PREFIX)gcc --sysroot=$(SYSROOT)
   CFLAGS=-g -Wall -MMD -MF $(OBJDIR)/$(@F).d
   CFLAGS += -Wno-array-bounds -Wno-format-truncation
   ifdef CONFIG_LTO
