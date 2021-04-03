@@ -60,7 +60,6 @@ ifdef CONFIG_WIN32
   endif
   EXE=.exe
 else
-  CROSS_PREFIX=
   EXE=
 endif
 ifdef CONFIG_CLANG
